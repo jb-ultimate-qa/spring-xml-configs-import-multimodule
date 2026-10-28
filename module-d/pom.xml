@@ -17,4 +17,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- A library jar with Spring XML files only: https://github.com/jb-ultimate-qa/spring-xml-lib -->
+        <dependency>
+            <groupId>com.github.jb-ultimate-qa</groupId>
+            <artifactId>spring-xml-lib</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>

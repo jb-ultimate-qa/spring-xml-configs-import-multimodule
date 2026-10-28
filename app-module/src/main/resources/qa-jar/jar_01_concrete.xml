@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+    <!-- IDEA-384253 QA: concrete classpath: import from a jar; the jar file imports extra/lib-extra1.xml by a relative path -->
+    <import resource="classpath:META-INF/qa-lib/lib-context.xml"/>
+    <util:list id="list" value-type="java.lang.Object">
+        <!-- expected: resolved -->
+        <ref bean="libBean1"/>
+        <ref bean="libBean2"/>
+        <ref bean="libExtraBean1"/>
+        <!-- expected: NOT resolved (red) -->
+        <ref bean="libExtraBean2"/>
+    </util:list>
+</beans>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+    <!-- IDEA-384253 QA: test resources of module-a are not on the app-module test classpath (Maven does not share test roots) -->
+    <import resource="classpath*:qa-test-a/*.xml"/>
+    <util:list id="list" value-type="java.lang.Object">
+        <!-- expected: NOT resolved (red) -->
+        <ref bean="testBeanA"/>
+    </util:list>
+</beans>
