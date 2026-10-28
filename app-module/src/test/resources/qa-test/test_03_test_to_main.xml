@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
-    <!-- IDEA-384253 QA: a test config imports a main resource (baseline, the main roots are on the test classpath) -->
+    <!-- a test config imports a main resource (baseline, the main roots are on the test classpath) -->
     <import resource="classpath:sharedDir/modApp_shared1.xml"/>
     <util:list id="list" value-type="java.lang.Object">
         <!-- expected: resolved -->

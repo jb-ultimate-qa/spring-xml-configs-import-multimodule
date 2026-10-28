@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
-    <!-- IDEA-384253 QA: beans defined only in test resources -->
+    <!-- beans defined only in test resources -->
     <bean id="testBean1" class="com.mytests.spring.app.ModuleAppBean1"/>
     <bean id="testBean2" class="com.mytests.spring.app.ModuleAppBean2"/>
 </beans>

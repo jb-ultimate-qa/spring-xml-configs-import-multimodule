@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 
-// IDEA-384253 QA: a main configuration imports a resource that exists only in src/test/resources.
+// a main configuration imports a resource that exists only in src/test/resources.
 public class QaMainToTestImport {
     public static void main(String[] args) {
         System.out.println("--- qa-test/test-imported.xml on the classpath: "

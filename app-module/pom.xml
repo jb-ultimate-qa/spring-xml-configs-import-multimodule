@@ -27,7 +27,7 @@
              <artifactId>module-b</artifactId>
              <version>1.0-SNAPSHOT</version>
          </dependency>
-         <!-- IDEA-384253 QA: a real-world Spring XML import from a library jar -->
+         <!-- a real-world Spring XML import from a library jar -->
          <dependency>
              <groupId>org.apache.cxf</groupId>
              <artifactId>cxf-core</artifactId>

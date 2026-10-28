@@ -2,9 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
-    <!-- IDEA-384253 QA: module-c does not depend on module-d, so the jar is not on the module-c classpath.
+    <!-- module-c does not depend on module-d, so the jar is not on the module-c classpath.
          The IDE still resolves the beans: app-module and web-module use module-c and have the jar
-         (module-b -> module-d -> jar), see IDEA-384665. The current-module-only scope is IDEA-384666. -->
+         (module-b -> module-d -> jar). -->
     <import resource="classpath:META-INF/qa-lib/lib-context.xml"/>
     <util:list id="list" value-type="java.lang.Object">
         <!-- current behavior: resolved -->
